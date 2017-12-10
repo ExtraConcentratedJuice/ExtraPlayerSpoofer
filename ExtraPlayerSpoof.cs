@@ -14,6 +14,7 @@ namespace ExtraConcentratedJuice.ExtraPlayerSpoof
             Logger.Log("> Setting player count to: " + Configuration.Instance.player_count);
             Logger.Log("-----------");
 
+            Level.onLevelLoaded += OnLevelLoaded;
             SteamGameServer.SetBotPlayerCount(Configuration.Instance.player_count);
         }
 
